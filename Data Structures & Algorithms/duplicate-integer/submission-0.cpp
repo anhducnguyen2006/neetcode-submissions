@@ -1,0 +1,14 @@
+class Solution {
+public:
+    bool hasDuplicate(vector<int>& nums) {
+        map<int, int> m;
+        for(auto x : nums) {
+            if(m.count(x)) {
+                return true;
+            } else { 
+                m.insert({x, 1});
+            }
+        }
+        return false;
+    }
+};
